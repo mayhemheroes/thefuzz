@@ -1,0 +1,5 @@
+project: thefuzz
+target: ratio
+cmds:
+  - cmd: /thefuzz/mayhem/ratio.py
+    libfuzzer: true
