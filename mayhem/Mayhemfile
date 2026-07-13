@@ -1,0 +1,11 @@
+# Mayhem target: thefuzz fuzzy string matching (fuzz.* scorers +
+# process.extract/extractOne), fuzzed via a native libFuzzer ELF that embeds
+# CPython and drives fuzz_ratio.TestOneInput (see mayhem/fuzz_ratio_driver.c).
+# Target name `ratio` is preserved from the original integration
+# (archive/original-master) so Mayhem run history stays attached.
+project: thefuzz
+target: ratio
+
+cmds:
+  - cmd: /mayhem/ratio
+    libfuzzer: true
